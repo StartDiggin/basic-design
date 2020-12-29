@@ -1,46 +1,50 @@
-.App {
+.app {
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (minmax(150px, min-content))[2];
-      grid-template-rows: repeat(2, minmax(150px, -webkit-min-content));
-      grid-template-rows: repeat(2, minmax(150px, min-content));
-  -ms-grid-columns: max-content 1fr 1fr min-content;
-      grid-template-columns: -webkit-max-content 1fr 1fr -webkit-min-content;
-      grid-template-columns: max-content 1fr 1fr min-content;
-  grid-auto-rows: 150px;
+  -ms-grid-rows: (minmax(100px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  -ms-grid-columns: (minmax(100%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-auto-rows: 100px;
 }
 
-.App--1 {
-  background-color: yellowgreen;
+.content {
+  border: 1px solid #000;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(white));
+  background: linear-gradient(black, white);
 }
 
-.App--2 {
-  background-color: orangered;
+.header {
+  border: 1px solid #000;
 }
 
-.App--3 {
-  background-color: blueviolet;
+.navigation {
+  border: 1px solid #000;
+  background-color: #bfbf40;
 }
 
-.App--4 {
-  background-color: green;
+.heading-secondary {
+  font-size: 3.5rem;
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#c02c2c), to(#0a0909));
+  background-image: linear-gradient(to right, #c02c2c, #0a0909);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  letter-spacing: 0.2rem;
 }
 
-.App--5 {
-  background-color: peru;
+.heading-secondary:hover {
+  -webkit-transform: skewY(2deg) skewX(20deg) scale(1.1);
+          transform: skewY(2deg) skewX(20deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.App--6 {
-  background-color: paleturquoise;
-}
-
-.App--7 {
-  background-color: red;
-}
-
-.App--8 {
-  background-color: blue;
-  color: white;
+.u-center-text {
+  text-align: center;
 }
 
 *,
@@ -57,10 +61,10 @@ html {
 }
 
 body {
-  padding: 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   line-height: 1.7;
   padding: 3rem;
+  width: 100vw;
 }
 /*# sourceMappingURL=style.css.map */

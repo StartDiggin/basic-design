@@ -1,4 +1,10 @@
-@import "./header";
+@import "./pages/app";
+@import "./pages/content";
+@import "./pages/header";
+@import "./pages/navigation";
+@import "./components/button";
+@import "./base/typography";
+@import "./base/utilities";
 
 *,
 *::after,
@@ -13,8 +19,8 @@ html {
 }
 
 body {
-  padding: 3rem;
   box-sizing: border-box;
   line-height: 1.7;
   padding: 3rem;
+  width: 100vw;
 }
