@@ -1,14 +1,7 @@
 @import "../abstracts/variables";
 
 .navMenu {
-  border: 3px solid purple;
   display: none;
-}
-
-@media only screen and (max-width: 780px) {
-  .navMenu {
-    display: block;
-  }
 }
 
 .nav {
@@ -18,8 +11,8 @@
 
   &__button {
     background-color: white;
-    height: 7rem;
-    width: 7rem;
+    height: 6rem;
+    width: 6rem;
     position: fixed;
     top: 4rem;
     right: 4rem;
@@ -31,8 +24,8 @@
   }
 
   &__background {
-    height: 6rem;
-    width: 6rem;
+    height: 5rem;
+    width: 5rem;
     border-radius: 50%;
     position: fixed;
     top: 4.5rem;
@@ -110,7 +103,7 @@
   //   Icon
   &__icon {
     position: relative;
-    margin-top: 3.5rem;
+    margin-top: 3rem;
 
     &,
     &::before,

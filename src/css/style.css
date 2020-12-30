@@ -1,4 +1,4 @@
-.heading-secondary {
+.heading-primary {
   font-size: 3.5rem;
   display: inline-block;
   background-image: -webkit-gradient(linear, left top, right top, from(#837d7d), to(black));
@@ -9,6 +9,20 @@
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   letter-spacing: 0.2rem;
+}
+
+.heading-primary:hover {
+  -webkit-transform: skewY(2deg) skewX(20deg) scale(1.1);
+          transform: skewY(2deg) skewX(20deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  margin-top: 1rem;
+  letter-spacing: 0.2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .heading-secondary:hover {
@@ -37,15 +51,16 @@
   margin-bottom: 8rem;
 }
 
-.navMenu {
-  border: 3px solid purple;
-  display: none;
+.u-margin-bottom-4 {
+  margin-bottom: 4rem;
 }
 
-@media only screen and (max-width: 780px) {
-  .navMenu {
-    display: block;
-  }
+.u-margin-bottom-3 {
+  margin-bottom: 3rem;
+}
+
+.navMenu {
+  display: none;
 }
 
 .nav__checkbox {
@@ -54,8 +69,8 @@
 
 .nav__button {
   background-color: white;
-  height: 7rem;
-  width: 7rem;
+  height: 6rem;
+  width: 6rem;
   position: fixed;
   top: 4rem;
   right: 4rem;
@@ -68,8 +83,8 @@
 }
 
 .nav__background {
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   position: fixed;
   top: 4.5rem;
@@ -141,7 +156,7 @@
 
 .nav__icon {
   position: relative;
-  margin-top: 3.5rem;
+  margin-top: 3rem;
 }
 
 .nav__icon, .nav__icon::before, .nav__icon::after {
@@ -191,6 +206,48 @@
           transform: rotate(-135deg);
 }
 
+@media only screen and (max-width: 600px) {
+  .navMenu {
+    display: block;
+  }
+  .heading-primary {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+  .u-left-text {
+    text-align: left;
+    margin-left: 2rem;
+  }
+  .heading-secondary {
+    font-size: 1.5rem;
+  }
+  .navigation {
+    display: none;
+  }
+  .home p {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 775px) {
+  .navMenu {
+    display: block;
+  }
+  .heading-primary {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+  .heading-secondary {
+    font-size: 1.5rem;
+  }
+  .navigation {
+    display: none;
+  }
+  .home p {
+    font-size: 1.4rem;
+  }
+}
+
 .app {
   width: 100%;
   display: -ms-grid;
@@ -212,6 +269,14 @@
   border: 1px solid #000;
 }
 
+.home {
+  padding: 2rem;
+}
+
+.home__para {
+  font-size: 2rem;
+}
+
 .navigation {
   border: 1px solid #000;
   background-color: #bfbf40;
@@ -223,12 +288,6 @@
   margin: 0 2rem;
   color: #2d6886;
   font-size: 1.5rem;
-}
-
-@media only screen and (min-width: 400px) and (max-width: 780px) {
-  .navigation {
-    display: none;
-  }
 }
 
 *,
