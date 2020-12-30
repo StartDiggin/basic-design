@@ -1,8 +1,10 @@
+@import "../abstracts/variables";
+
 .heading-secondary {
   font-size: 3.5rem;
 
   display: inline-block;
-  background-image: linear-gradient(to right, rgb(192, 44, 44), rgb(10, 9, 9));
+  background-image: $gradient-dark;
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;

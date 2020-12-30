@@ -1,6 +1,15 @@
 @import "../abstracts/variables";
+// @import "../base/utilities";
 
 .navigation {
   border: 1px solid #000;
   background-color: $primary-normal;
+  height: 5rem;
+
+  &__links {
+    text-decoration: none;
+    margin: 0 2rem;
+    color: $tertiary-dark;
+    font-size: 1.5rem;
+  }
 }

@@ -11,8 +11,8 @@
 
 .content {
   border: 1px solid #000;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), to(white));
-  background: linear-gradient(black, white);
+  background: -webkit-gradient(linear, left top, right top, from(#837d7d), to(white));
+  background: linear-gradient(to right, #837d7d, white);
 }
 
 .header {
@@ -22,13 +22,21 @@
 .navigation {
   border: 1px solid #000;
   background-color: #bfbf40;
+  height: 5rem;
+}
+
+.navigation__links {
+  text-decoration: none;
+  margin: 0 2rem;
+  color: #2d6886;
+  font-size: 1.5rem;
 }
 
 .heading-secondary {
   font-size: 3.5rem;
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#c02c2c), to(#0a0909));
-  background-image: linear-gradient(to right, #c02c2c, #0a0909);
+  background-image: -webkit-gradient(linear, left top, right top, from(#837d7d), to(black));
+  background-image: linear-gradient(to right, #837d7d, black);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
@@ -45,6 +53,22 @@
 
 .u-center-text {
   text-align: center;
+}
+
+.u-center-vh-text {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem;
 }
 
 *,

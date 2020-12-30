@@ -1,6 +1,8 @@
+// Fonts
 $font-robo: "Roboto", sans-serif;
 $font-mark: "Permanent Marker", cursive;
 
+// Colors
 $base-color-1: 60;
 $base-color-2: 120;
 $base-color-3: 200;
@@ -29,6 +31,8 @@ $tertiary-light: hsla($base-color-3, $saturation-2, $lightness-1, $opacity-1);
 $tertiary-normal: hsla($base-color-3, $saturation-2, $lightness-2, $opacity-1);
 $tertiary-dark: hsla($base-color-3, $saturation-2, $lightness-3, $opacity-1);
 
-$color-1: rgb(0, 0, 0);
+$color-1: rgb(131, 125, 125);
 $color-2: rgb(255, 255, 255);
-$gradient-light: linear-gradient($color-1, $color-2);
+$color-3: rgb(0, 0, 0);
+$gradient-light: linear-gradient(to right, $color-1, $color-2);
+$gradient-dark: linear-gradient(to right, $color-1, $color-3);
