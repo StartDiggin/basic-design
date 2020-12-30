@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Navigation from './navigation';
 // pages 
 import Contact from './Contact/contact';
 import RandomColor from './RandomColor/randomcolor';
@@ -13,6 +12,9 @@ import Error from './error';
 
 import Home from './home';
 
+import Navigation from './navigation';
+import NavMenu from './navMenu';
+
 
 
 class Content extends Component {
@@ -22,6 +24,7 @@ class Content extends Component {
             <section className="nav_content">
                 <BrowserRouter>
                     <Navigation />
+                    <NavMenu />
                     <div className="content">
                         <Switch>
                             <Route path="/" component={Home} exact/>
