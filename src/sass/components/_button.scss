@@ -1,1 +1,72 @@
+@import "../abstracts/variables";
 
+// buttons
+.submitBtn {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 5rem;
+  margin: 2rem 0;
+  border: 0;
+  outline: none;
+  box-shadow: $box-shadow-4;
+  cursor: pointer;
+  transition: all 0.02s ease-in-out;
+
+  &:active {
+    transform: translateY(0.2rem);
+    box-shadow: $box-shadow-5;
+  }
+}
+
+.btn {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 5rem;
+  margin: 1rem 1rem;
+  border: 0;
+  outline: none;
+  box-shadow: $box-shadow-4;
+  cursor: pointer;
+  transition: all 0.02s ease-in-out;
+
+  &:active {
+    transform: translateY(0.2rem);
+    box-shadow: $box-shadow-5;
+  }
+}
+
+.closeIcon {
+  background-color: transparent;
+  border-radius: 1rem;
+  border: 0;
+  outline: none;
+  font-size: 1.8rem;
+  box-shadow: $box-shadow-4;
+  cursor: pointer;
+  transition: all 0.02s ease-in-out;
+
+  position: absolute;
+  top: 0;
+  right: -1rem;
+
+  &:active {
+    transform: translateY(0.2rem);
+    box-shadow: $box-shadow-5;
+  }
+}
+
+.letterBtn {
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  margin: 0 0.5rem 0 0;
+  border-radius: 0.5rem;
+  outline: none;
+  box-shadow: $box-shadow-4;
+  cursor: pointer;
+  transition: all 0.02s ease-in-out;
+
+  &:active {
+    transform: translateY(0.2rem);
+    box-shadow: $box-shadow-5;
+  }
+}

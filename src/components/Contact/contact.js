@@ -57,7 +57,7 @@ class Contact extends React.Component{
     }
     
     handleView = (id) => {
-        let element = document.querySelector(".contactView")
+        let element = document.querySelector(".contact__view")
         element.classList.add("activeView")
         const person = this.state.phoneBook.find(contact => contact.id === id)
         this.setState({
@@ -78,7 +78,7 @@ class Contact extends React.Component{
             phoneNum: phoneNum,
             email: email
         })
-        let element = document.querySelector(".contactForm")
+        let element = document.querySelector(".contact__form")
         element.classList.add("editContact")
     }
    
@@ -94,7 +94,7 @@ class Contact extends React.Component{
            return {contact}
        })
        // adds background color to the form when editing
-       let element = document.querySelector(".contactForm")
+       let element = document.querySelector(".contact__formBox")
         element.classList.remove("editContact")
        this.resetState()
     }
@@ -119,7 +119,7 @@ class Contact extends React.Component{
     }
 
     removeContactView = () => {
-        let element = document.querySelector(".contactView")
+        let element = document.querySelector(".contact__view")
         element.classList.remove("activeView")
     }
 
@@ -138,17 +138,24 @@ class Contact extends React.Component{
                     <div className="contact__display">
                         {/* Displays the alphabet  */}
                         {letters.map(letter => {
-                            return <button key={letter} value={letter} onClick={this.handleLetter}>{letter}</button>
+                            return <button className="letterBtn" key={letter} value={letter} onClick={this.handleLetter}>{letter}</button>
                         })}
-                        {this.state.phoneBook.map(contact => <p key={contact.id}>
-                            <span>{contact.firstName} {contact.lastName}  </span>
-                            <button onClick={() => this.handleView(contact.id)}>view</button>
-                        </p>)}
+                    {/* this div gets displayed when letter is clicked */}
+                    <div className="contact__person">
+                        {this.state.phoneBook.map(contact => <div key={contact.id}>
+                            <span className="contact__details">{contact.firstName} {contact.lastName}  </span>
+                            <button className="btn" onClick={() => this.handleView(contact.id)}>view</button>
+                        </div>)}
+                    </div>
+                       {/* This div gets displayed when the view button is clicked  */}
                     </div>
                     <div className="contact__view">
-                        <span>{this.state.singleContact.firstName} {this.state.singleContact.lastName}</span><br />
-                        <span>{this.state.singleContact.phoneNum} </span><br />
-                        <span>{this.state.singleContact.email}</span><br />
+                        <span className="contact__details" >{this.state.singleContact.firstName} {this.state.singleContact.lastName}</span><br />
+                        <span className="contact__details" >{this.state.singleContact.phoneNum} </span><br />
+                        <span className="contact__details" >{this.state.singleContact.email}</span><br />
+                        {/* <span className="contact__details" >Fred Finstone</span><br />
+                        <span className="contact__details" >509-222-6542</span><br />
+                        <span className="contact__details" >fred@bedrock.com</span><br /> */}
                         <button className="closeIcon" onClick={this.removeContactView}>x</button>
                         <button className="btn" onClick={this.handleEdit}>Edit</button>
                         <button className="btn" onClick={this.handleDelete}>Delete</button>
