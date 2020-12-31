@@ -3,5 +3,8 @@
 
   &__para {
     font-size: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 }

@@ -1,9 +1,46 @@
-// header.js
+// Media Queries
+@media only screen and (min-width: 601px) and (max-width: 775px) {
+  .navMenu {
+    display: block;
+  }
 
-// navMenu.js
+  .heading-primary {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .heading-secondary {
+    font-size: 1.5rem;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .home {
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .navMenu {
     display: block;
+  }
+
+  .nav {
+    &__item {
+      margin: 0;
+    }
+
+    &__links {
+      &:link,
+      &:visited {
+        display: inline-block;
+        font-size: 2rem;
+      }
+    }
   }
 
   .heading-primary {
@@ -26,31 +63,6 @@
   .home {
     p {
       font-size: 1.2rem;
-    }
-  }
-}
-
-@media only screen and (min-width: 601px) and (max-width: 775px) {
-  .navMenu {
-    display: block;
-  }
-
-  .heading-primary {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-  }
-
-  .heading-secondary {
-    font-size: 1.5rem;
-  }
-
-  .navigation {
-    display: none;
-  }
-
-  .home {
-    p {
-      font-size: 1.4rem;
     }
   }
 }

@@ -1,32 +1,16 @@
+@import "./pages/body";
 @import "./base/typography";
 @import "./base/utilities";
 
 @import "./components/button";
 
 @import "./layout/nav";
-@import "./layout/media";
 
 @import "./pages/app";
+@import "./pages/contact";
 @import "./pages/content";
 @import "./pages/header";
 @import "./pages/home";
 @import "./pages/navigation";
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  box-sizing: border-box;
-  line-height: 1.7;
-  padding: 3rem;
-  width: 100vw;
-}
+@import "./layout/media";

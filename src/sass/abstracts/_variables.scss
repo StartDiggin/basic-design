@@ -3,13 +3,13 @@ $font-robo: "Roboto", sans-serif;
 $font-mark: "Permanent Marker", cursive;
 
 // Colors
-$base-color-1: 60;
+$base-color-1: 168;
 $base-color-2: 120;
 $base-color-3: 200;
 
 $saturation-1: 20%;
 $saturation-2: 50%;
-$saturation-3: 80%;
+$saturation-3: 100%;
 
 $lightness-1: 75%;
 $lightness-2: 50%;
@@ -19,9 +19,9 @@ $opacity-1: 100%;
 $opacity-2: 80%;
 $opacity-3: 60%;
 
-$primary-light: hsla($base-color-1, $saturation-2, $lightness-1, $opacity-1);
+$primary-light: hsla($base-color-1, $saturation-3, $lightness-1, $opacity-1);
 $primary-normal: hsla($base-color-1, $saturation-2, $lightness-2, $opacity-1);
-$primary-dark: hsla($base-color-1, $saturation-2, $lightness-3, $opacity-1);
+$primary-dark: hsla($base-color-1, $saturation-1, $lightness-3, $opacity-1);
 
 $secondary-light: hsla($base-color-2, $saturation-2, $lightness-1, $opacity-1);
 $secondary-normal: hsla($base-color-2, $saturation-2, $lightness-2, $opacity-1);
@@ -31,8 +31,18 @@ $tertiary-light: hsla($base-color-3, $saturation-2, $lightness-1, $opacity-1);
 $tertiary-normal: hsla($base-color-3, $saturation-2, $lightness-2, $opacity-1);
 $tertiary-dark: hsla($base-color-3, $saturation-2, $lightness-3, $opacity-1);
 
+// Gradients
+
 $color-1: rgb(131, 125, 125);
 $color-2: rgb(255, 255, 255);
 $color-3: rgb(0, 0, 0);
-$gradient-light: linear-gradient(to right, $color-1, $color-2);
-$gradient-dark: linear-gradient(to right, $color-1, $color-3);
+$gradient-light: linear-gradient($color-1, $color-2);
+$gradient-light-2: linear-gradient($color-2, $color-1);
+$gradient-dark: linear-gradient(to right, $primary-light, $primary-dark);
+$nav-gradient: linear-gradient(to right, $primary-normal, $primary-dark);
+$radial-gradient-1: radial-gradient($primary-light, $primary-dark);
+
+// Box shadow
+$box-shadow-1: 0 1rem 3rem rgba(#000, 0.1);
+$box-shadow-2: 0 1rem 5rem rgba(rgb(0, 0, 0), 0.5);
+$box-shadow-3: 0 1rem 5rem rgba($primary-light, 0.5);
