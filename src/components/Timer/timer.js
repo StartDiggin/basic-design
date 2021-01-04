@@ -68,23 +68,26 @@ const TimerApp = () => {
     return(
         <div className="section">
             <div className="timer u-center-text">
-                <h2 className="heading-secondary">Timer</h2>
+                <h2 className="heading-secondary u-margin-bottom-3">Timer</h2>
                 <div className="timer__container">
-                    <div>
-                        <span>Break Time:</span><br />
-                        <h3>{breaks} minutes</h3>   
+
+                    {/* break time  */}
+                    <div className="timer__break">
+                        <h3 className="heading-tertiary">Break Time:</h3>   
+                        <span className="timer__mins">{breaks} minutes</span>
 
                         {/* add 5 minutes button doesn't show unless there is 5 minutes are more added first to session  */}
-                        {minutes > 4 && start === false ? <button onClick={() => setBreaks(breaks + 5)}>add 5 minutes</button> : null}
+                        {minutes > 4 && start === false ? <button className="btn timerBtn" onClick={() => setBreaks(breaks + 5)}>+ 5 mins</button> : null}
 
                         {/* minus 5 minutes button doesn't show unless there is 5 minutes are more added first  */}
-                        {breaks > 4 && start === false ? <button onClick={() => setBreaks(breaks - 5)}>minus 5 minutes</button> : null}
-                        
+                        {breaks > 4 && start === false ? <button className="btn timerBtn" onClick={() => setBreaks(breaks - 5)}>- 5 mins</button> : null}
                     </div>
-                    <div>
-                        <span>Timer:</span>
-                        {counter < 10 ? <h3 className="timerBtn">{mins}:0{counter}</h3>:<h3 className="timerBtn">{mins}:{counter}</h3>}
-                        {minutes < 5 ? null: <button className="timerBtn" onClick={() => {setMins(minutes-1); 
+
+                    {/* Main timer  */}
+                    <div className="timer__main">
+                        <h3 className="heading-tertiary">Timer:</h3>
+                        {counter < 10 ? <span className="timer__mins">{mins}:0{counter}</span>:<span className="timer__mins">{mins}:{counter}</span>}
+                        {minutes < 5 ? null: <button className="btn timerBtn" onClick={() => {setMins(minutes-1); 
                             setBreakMins(breaks-1);  
                             setCounter(59); 
                             setStart(true)}}
@@ -93,21 +96,22 @@ const TimerApp = () => {
                         <span>Break Time Left:</span><br />
                         {counter < 10 && breakMins > -1 ? <h3>{breakMins}:0{counter}</h3>: breakMins > -1 ? <h3>{breakMins}:{counter}</h3>:null}
                             
-                        <div className="resetBtn">
-                            {/* button to reset timer  */}
-                            <button onClick={() => {setCounter(0); setMins(0); setMinutes(0); setBreaks(0);setBreakMins(0); setPlaying(false); setStart(false)}}>Reset Timer</button>
+                        {/* button to reset timer  */}
+                        <div className="timer__reset">
+                            <button className="btn timerBtn" onClick={() => {setCounter(0); setMins(0); setMinutes(0); setBreaks(0);setBreakMins(0); setPlaying(false); setStart(false)}}>Reset Timer</button>
                         </div>
-                        
-                    </div>
-                    <div> 
-                        <span>Session Time:</span>
-                        <h3>{minutes} minutes</h3>
-                        {start === false ? <button onClick={() => setMinutes(minutes + 5) }>add 5 minutes</button> : null}
-                        {minutes > 4 && start === false ? <button onClick={() => setMinutes(minutes - 5)}>minus 5 minutes</button> : null}<br />
-                        
                     </div>
 
-                    <div className="description">
+                    {/* Session time  */}
+                    <div className="timer__session"> 
+                        <h3 className="heading-tertiary">Session Time:</h3>
+                        <span className="timer__mins">{minutes} minutes</span>
+                        {start === false ? <button className="btn timerBtn timerBtn--sm" onClick={() => setMinutes(minutes + 5) }>+ 5 mins</button> : null}
+                        {minutes > 4 && start === false ? <button className="btn timerBtn timerBtn--sm" onClick={() => setMinutes(minutes - 5)}>- 5 mins</button> : null}<br />   
+                    </div>
+
+                    {/* App Description  */}
+                    <div className="timer__description u-margin-top-3 u-padding-rl-3">
                         <p>
                             This app lets you set a session time and a break time. You can add and subtract minutes to the session time
                             and to the break time. A sound plays when the break timer ends, if set, and a sound plays when the session timer 
@@ -120,7 +124,6 @@ const TimerApp = () => {
             </div>
         </div>
     )
-
 }
 
 

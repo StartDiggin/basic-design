@@ -95,6 +95,14 @@ body {
   margin-bottom: 3rem;
 }
 
+.u-margin-top-3 {
+  margin-top: 3rem;
+}
+
+.u-padding-rl-3 {
+  padding: 0 3rem 0 3rem;
+}
+
 .submitBtn {
   width: 8rem;
   height: 2rem;
@@ -183,6 +191,11 @@ body {
 .ranColBtn {
   width: 9rem;
   height: 2rem;
+}
+
+.timerBtn {
+  width: 13rem;
+  font-size: 1.6rem;
 }
 
 .navMenu {
@@ -587,6 +600,26 @@ body {
 .timer {
   padding: 2rem;
   font-size: 1.6rem;
+  width: 100%;
+}
+
+.timer__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+}
+
+.timer__mins {
+  display: block;
+}
+
+.timer__session {
+  font-size: 1.6rem;
+}
+
+.timer__description {
+  grid-column: 1/-1;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 775px) {
@@ -601,12 +634,34 @@ body {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 401px) and (max-width: 600px) {
   .navMenu {
     display: block;
   }
   html {
     font-size: 43.75%;
+  }
+  .nav__item {
+    margin: 0;
+  }
+  .nav__links:link, .nav__links:visited {
+    display: inline-block;
+  }
+  .u-left-text {
+    text-align: left;
+    margin: 1rem 0 0 2rem;
+  }
+  .navigation {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .navMenu {
+    display: block;
+  }
+  html {
+    font-size: 37.5%;
   }
   .nav__item {
     margin: 0;
