@@ -129,7 +129,7 @@ class Contact extends React.Component{
         return(
             <div className="section">
                 <div className="contact u-center-text">
-                    <h1 className="heading-secondary u-margin-bottom-3">Contact</h1>
+                    <h2 className="heading-secondary u-margin-bottom-3">Contact</h2>
                     <div className="contact__formBox">
                         {this.state.edit ? 
                         <ContactUpdateForm firstName={firstName} lastName={lastName} phoneNum={phoneNum} email={email} handleChange={this.handleChange} handleUpdate={this.handleUpdate} /> : 

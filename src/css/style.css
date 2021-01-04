@@ -52,6 +52,21 @@ body {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+.heading-tertiary {
+  font-size: 2rem;
+  margin-top: 1rem;
+  letter-spacing: 0.2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.heading-tertiary:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #80ffe6;
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
 .u-center-text {
   text-align: center;
 }
@@ -163,6 +178,11 @@ body {
           transform: translateY(0.2rem);
   -webkit-box-shadow: 0 1rem 3rem rgba(131, 125, 125, 0.4);
           box-shadow: 0 1rem 3rem rgba(131, 125, 125, 0.4);
+}
+
+.ranColBtn {
+  width: 9rem;
+  height: 2rem;
 }
 
 .navMenu {
@@ -372,6 +392,8 @@ body {
   -webkit-box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.5);
           box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.5);
   background: #cfcfcf;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
 }
 
 .home {
@@ -422,33 +444,20 @@ body {
           transform: scaleX(1);
 }
 
+.randomColor {
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
 @media only screen and (min-width: 601px) and (max-width: 775px) {
   .navMenu {
     display: block;
   }
-  .heading-primary {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-  }
-  .heading-secondary {
-    font-size: 1.5rem;
+  html {
+    font-size: 56.25%;
   }
   .navigation {
     display: none;
-  }
-  .home p {
-    font-size: 1.4rem;
-  }
-  .contact {
-    font-size: 1.5rem;
-  }
-  .contact__form__label {
-    width: 12rem;
-    font-size: 1.5rem;
-  }
-  .letterBtn {
-    padding: 0.3rem;
-    margin: 0 0.3rem 0 0;
   }
 }
 
@@ -456,40 +465,21 @@ body {
   .navMenu {
     display: block;
   }
+  html {
+    font-size: 43.75%;
+  }
   .nav__item {
     margin: 0;
   }
   .nav__links:link, .nav__links:visited {
     display: inline-block;
-    font-size: 2rem;
-  }
-  .heading-primary {
-    font-size: 1.5rem;
-    margin-top: 3rem;
   }
   .u-left-text {
     text-align: left;
-    margin-left: 2rem;
-  }
-  .heading-secondary {
-    font-size: 1.5rem;
+    margin: 1rem 0 0 2rem;
   }
   .navigation {
     display: none;
-  }
-  .home p {
-    font-size: 1.2rem;
-  }
-  .contact {
-    font-size: 1.2rem;
-  }
-  .contact__form__label {
-    font-size: 1.2rem;
-    width: 10rem;
-  }
-  .letterBtn {
-    padding: 0.1rem;
-    margin: 0 0.1rem 0 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
