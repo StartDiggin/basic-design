@@ -449,6 +449,146 @@ body {
   font-size: 1.6rem;
 }
 
+.randomMeme {
+  padding: 2rem;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.randomMeme__form__label {
+  display: inline-block;
+  width: 15rem;
+  text-align: right;
+  font-size: 1.6rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.randomMeme__imgBox {
+  height: 40rem;
+  width: 50rem;
+  display: inline-block;
+  color: white;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 1rem;
+}
+
+.randomMeme__imgBox__img {
+  height: 40rem;
+  width: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.randomMeme__imgBox__topText {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.randomMeme__imgBox h3 {
+  text-shadow: 0.1rem 0.1rem 1rem black;
+}
+
+.randomMeme__imgBox__btmText {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.slideShow {
+  padding: 2rem;
+  font-size: 1.6rem;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.slideShow__container {
+  height: auto;
+}
+
+.slideShow__innerContainer {
+  height: 50rem;
+  width: 50rem;
+  position: relative;
+}
+
+.slideShow__slides {
+  height: 50rem;
+  width: 50rem;
+  display: none;
+}
+
+.slideShow__slides img {
+  height: 50rem;
+  width: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slideShow__indicators {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.slideShow__indicator {
+  height: 0.5rem;
+  width: 2rem;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.fill {
+  background-color: #40bfa6;
+}
+
+.activeImg {
+  display: inline-block;
+}
+
+.arrows {
+  height: 5rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrows:hover {
+  background-color: #476b64;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.timer {
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
 @media only screen and (min-width: 601px) and (max-width: 775px) {
   .navMenu {
     display: block;

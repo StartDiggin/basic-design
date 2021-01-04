@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,MAAM;CAClB",
+    "sources": [
+        "../sass/pages/timer.scss"
+    ],
+    "names": [],
+    "file": "timer.css"
+}

@@ -1,0 +1,70 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.slideShow {
+  padding: 2rem;
+  font-size: 1.6rem;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  &__container {
+    height: auto;
+  }
+
+  &__innerContainer {
+    height: 50rem;
+    width: 50rem;
+    position: relative;
+  }
+
+  &__slides {
+    height: 50rem;
+    width: 50rem;
+    display: none;
+
+    img {
+      height: 50rem;
+      width: 50rem;
+      object-fit: cover;
+    }
+  }
+
+  &__indicators {
+    @include center-HB;
+  }
+
+  &__indicator {
+    height: 0.5rem;
+    width: 2rem;
+    display: inline-block;
+    margin: 1rem;
+    border-radius: 50%;
+    background-color: $color-2;
+  }
+}
+
+.fill {
+  background-color: $primary-normal;
+}
+
+.activeImg {
+  display: inline-block;
+}
+.arrows {
+  height: 5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrows:hover {
+  background-color: $primary-dark;
+}
+
+.prev {
+  @include center-LVT;
+}
+
+.next {
+  @include center-RVT;
+}
