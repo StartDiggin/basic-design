@@ -72,15 +72,15 @@ class RandomColor extends React.Component {
                     {/* hex color  */}
                     <h3 className="heading-tertiary" style={styles}>Random Hex Color</h3>
                     <h4>Hex color: {this.state.hexColor}</h4>
-                    <button className="btn ranColBtn" onClick={this.hexColor}>Hex color</button>
+                    <button className="btn btn--md" onClick={this.hexColor}>Hex color</button>
                     {/* rgba color  */}
                     <h3 className="heading-tertiary" style={styles1}>Random RGBA Color</h3>
                     <h4>RGBA color: {this.state.rgbaColor}</h4>
-                    <button className="btn ranColBtn" onClick={this.rgbaColor}>RGBA color</button>
+                    <button className="btn btn--md" onClick={this.rgbaColor}>RGBA color</button>
                     {/* hsla color  */}
                     <h3 className="heading-tertiary" style={styles2}>Random HSLA Color</h3>
                     <h4>HSLA color: {this.state.hslaColor}</h4>
-                    <button className="btn ranColBtn" onClick={this.hslaColor}>HSLA color</button>
+                    <button className="btn btn--md" onClick={this.hslaColor}>HSLA color</button>
                 </div>
             </div>
         )

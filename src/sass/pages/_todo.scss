@@ -1,0 +1,25 @@
+.todo {
+  padding: 2rem;
+  font-size: 1.6rem;
+
+  &__listBox {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(150px, 1fr));
+  }
+
+  &__form {
+    font-size: 1.6rem;
+  }
+
+  &__label {
+    margin-right: 1rem;
+
+    &--list {
+      display: inline-block;
+      width: 30rem;
+      text-align: left;
+      font-size: 1.6rem;
+      margin-left: 1rem;
+    }
+  }
+}

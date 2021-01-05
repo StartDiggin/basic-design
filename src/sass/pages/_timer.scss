@@ -4,27 +4,17 @@
   width: 100%;
 
   &__container {
+    width: 90%;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  }
-
-  &__break {
-    // grid-column: 1/2;
-  }
-
-  &__main {
-    // grid-column: 2/3;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 
   &__mins {
     display: block;
   }
 
-  &__reset {
-  }
-
   &__session {
-    // grid-column: 3/4;
     font-size: 1.6rem;
   }
 

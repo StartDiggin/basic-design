@@ -125,7 +125,7 @@ body {
 }
 
 .btn {
-  width: 6rem;
+  width: 7rem;
   height: 2rem;
   border-radius: 5rem;
   margin: 1rem 1rem;
@@ -143,6 +143,16 @@ body {
           transform: translateY(0.2rem);
   -webkit-box-shadow: 0 1rem 3rem rgba(131, 125, 125, 0.4);
           box-shadow: 0 1rem 3rem rgba(131, 125, 125, 0.4);
+}
+
+.btn--md {
+  width: 9rem;
+  font-size: 1.6rem;
+}
+
+.btn--lg {
+  width: 12rem;
+  font-size: 1.6rem;
 }
 
 .closeIcon {
@@ -186,16 +196,6 @@ body {
           transform: translateY(0.2rem);
   -webkit-box-shadow: 0 1rem 3rem rgba(131, 125, 125, 0.4);
           box-shadow: 0 1rem 3rem rgba(131, 125, 125, 0.4);
-}
-
-.ranColBtn {
-  width: 9rem;
-  height: 2rem;
-}
-
-.timerBtn {
-  width: 13rem;
-  font-size: 1.6rem;
 }
 
 .navMenu {
@@ -604,10 +604,12 @@ body {
 }
 
 .timer__container {
+  width: 90%;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 }
 
 .timer__mins {
@@ -620,6 +622,43 @@ body {
 
 .timer__description {
   grid-column: 1/-1;
+}
+
+.todo {
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+
+.todo__listBox {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (minmax(150px, 1fr))[2];
+      grid-template-rows: repeat(2, minmax(150px, 1fr));
+}
+
+.todo__form {
+  font-size: 1.6rem;
+}
+
+.todo__label {
+  margin-right: 1rem;
+}
+
+.todo__label--list {
+  display: inline-block;
+  width: 30rem;
+  text-align: left;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+}
+
+@media only screen and (min-width: 1435px) {
+  .timer__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 775px) {
