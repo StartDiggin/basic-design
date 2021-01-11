@@ -728,6 +728,19 @@ body {
     display: none;
   }
 
+  /* random image  */
+  .randomMeme__imgBox {
+    height: 35rem;
+    width: 45rem;
+  }
+  .randomMeme__imgBox__img {
+    border: 1px solid purple;
+    height: 35rem;
+    width: 45rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
   /* slide show  */
   .slideShow__container {
     height: auto;
@@ -778,6 +791,19 @@ body {
   }
   .navigation {
     display: none;
+  }
+
+  /* random image  */
+  .randomMeme__imgBox {
+    height: 30rem;
+    width: 40rem;
+  }
+  .randomMeme__imgBox__img {
+    border: 1px solid purple;
+    height: 30rem;
+    width: 40rem;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   /* slide show  */
