@@ -55,9 +55,11 @@ class SlideShowApp extends React.Component {
         return(
             <div className="section">
                <div className="slideShow u-center-text ">
+               {/* <div className="slideShow"> */}
                    <h2 className="heading-secondary u-margin-bottom-3">Slide Show</h2>
                 {/* Image container  */}
                     <div className="slideShow__container u-center-vh-text">
+                    {/* <div className="slideShow__container"> */}
                         <div className="slideShow__innerContainer">
                             {/* image 1 */}
                             <div className="slideShow__slides fade activeImg">

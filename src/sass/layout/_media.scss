@@ -1,3 +1,5 @@
+@import "../abstracts/mixins";
+
 // Media Queries
 @media only screen and (min-width: 1435px) {
   .timer__container {
@@ -40,46 +42,46 @@
         display: inline-block;
       }
     }
-  }
 
-  .u-left-text {
-    text-align: left;
-    margin: 1rem 0 0 2rem;
-  }
-
-  .navigation {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .navMenu {
-    display: block;
-  }
-
-  html {
-    font-size: 37.5%;
-  }
-
-  .nav {
-    &__item {
-      margin: 0;
+    .u-left-text {
+      text-align: left;
+      margin: 1rem 0 0 2rem;
     }
 
-    &__links {
-      &:link,
-      &:visited {
-        display: inline-block;
+    .navigation {
+      display: none;
+    }
+
+  }
+
+  @media only screen and (max-width: 400px) {
+    .navMenu {
+      display: block;
+    }
+
+    html {
+      font-size: 37.5%;
+    }
+
+    .nav {
+      &__item {
+        margin: 0;
+      }
+
+      &__links {
+        &:link,
+        &:visited {
+          display: inline-block;
+        }
       }
     }
-  }
 
-  .u-left-text {
-    text-align: left;
-    margin: 1rem 0 0 2rem;
-  }
+    .u-left-text {
+      text-align: left;
+      margin: 1rem 0 0 2rem;
+    }
 
-  .navigation {
-    display: none;
-  }
+    .navigation {
+      display: none;
+    }
 }
