@@ -547,7 +547,7 @@ body {
   padding: 2rem;
   font-size: 1.6rem;
   width: 100%;
-  height: 100vh;
+  height: 70rem;
   position: relative;
 }
 
@@ -555,7 +555,7 @@ body {
   height: auto;
   width: 50rem;
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -666,7 +666,6 @@ body {
 .todo__listBox {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (minmax(150px, 1fr)) [2];
   grid-template-rows: repeat(2, minmax(150px, 1fr));
 }
 
@@ -728,13 +727,6 @@ body {
   .navigation {
     display: none;
   }
-
-  .slideShow__container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -120%);
-  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -758,5 +750,7 @@ body {
   .navigation {
     display: none;
   }
+
+  /* slide show  */
 }
 /*# sourceMappingURL=style.css.map */
