@@ -64,10 +64,14 @@ class TodoApp extends React.Component {
     }
 
     handleDelete = (id) => {
-        const newList = this.state.todoData.filter(item => item.id !== id)
-        this.setState({
-            todoData: newList
-        })
+        if(this.state.edit){
+            alert("Please finish updating Todo before deleting!")
+        }else{
+            const newList = this.state.todoData.filter(item => item.id !== id)
+            this.setState({
+                todoData: newList
+            })
+        }
     }
 
     handleEdit = (id) => {
@@ -82,7 +86,6 @@ class TodoApp extends React.Component {
     handleUpdate = (e) => {
         e.preventDefault()
         let id = this.state.id
-        console.log(e.target.todo.value.length)
         if(e.target.todo.value.length !== 0){
             this.setState(() => {
                 const todo = this.state.todoData.find(todo => todo.id === id)

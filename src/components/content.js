@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
+ 
 // pages 
 import Contact from './Contact/contact';
 import RandomColor from './RandomColor/randomcolor';
