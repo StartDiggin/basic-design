@@ -101,11 +101,15 @@ class Contact extends React.Component{
 
     handleDelete = () => {
         const id = this.state.singleContact.id 
-        let contacts = this.state.contacts.filter(contact => contact.id !== id)
-        this.setState({
-            contacts:contacts
-        })
-        this.removeContactView()
+        if(this.state.edit){
+            alert("Please finish updating contact before deleting!")
+        } else {
+            let contacts = this.state.contacts.filter(contact => contact.id !== id)
+            this.setState({
+                contacts:contacts
+            })
+            this.removeContactView()
+        }
     }
 
     resetState = () => {

@@ -84,4 +84,36 @@
     .navigation {
       display: none;
     }
+
+    // slideshow 
+    .slideShow__container {
+      height: auto;
+      width: 50rem;
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .slideShow__innerContainer {
+      height: 50rem;
+      width: 50rem;
+      position: relative;
+    }
+    
+    .slideShow__slides {
+      height: 50rem;
+      width: 50rem;
+      display: none;
+    }
+    
+    .slideShow__slides img {
+      height: 50rem;
+      width: 50rem;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+
+
 }
