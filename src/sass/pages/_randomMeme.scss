@@ -4,8 +4,6 @@
 .randomMeme {
   padding: 2rem;
   font-size: 1.6rem;
-  // height: 40rem;
-  // width: 50rem;
   position: relative;
 
   &__form {
@@ -27,10 +25,30 @@
     position: relative;
     margin-top: 1rem;
 
+    @include respond(phone) {
+      height: 35rem;
+      width: 35rem;
+    }
+    @include respond(phoneSm) {
+      height: 30rem;
+      width: 30rem;
+    }
+
     &__img {
       height: 40rem;
       width: 50rem;
       object-fit: cover;
+
+      @include respond(phone) {
+        height: 35rem;
+        width: 35rem;
+        object-fit: cover;
+      }
+      @include respond(phoneSm) {
+        height: 30rem;
+        width: 30rem;
+        object-fit: cover;
+      }
     }
 
     &__topText {
