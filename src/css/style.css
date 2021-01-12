@@ -133,9 +133,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
 }
 
 .u-margin-bottom-8 {
@@ -158,9 +158,30 @@ body {
   padding: 0 3rem 0 3rem;
 }
 
+/* 
+0 - 600px:    phone
+600 - 900px:  tablet portrait 
+900 - 1200px: tablet landscape
+1200 - 1800px: normal styles apply
+1800 px +:    big desktop
+
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+$breakpoints
+- phone
+- tab-port
+- tab-land
+- big-desk
+1em = 16px
+*/
 .submitBtn {
   width: 8rem;
   height: 2rem;
+  font-size: 1.6rem;
   border-radius: 5rem;
   margin: 2rem 0;
   border: 0;
@@ -182,6 +203,7 @@ body {
 .btn {
   width: 7rem;
   height: 2rem;
+  font-size: 1.6rem;
   border-radius: 5rem;
   margin: 1rem 1rem;
   border: 0;
@@ -202,12 +224,10 @@ body {
 
 .btn--md {
   width: 9rem;
-  font-size: 1.6rem;
 }
 
 .btn--lg {
-  width: 12rem;
-  font-size: 1.6rem;
+  width: 11rem;
 }
 
 .closeIcon {
@@ -726,13 +746,9 @@ $breakpoints
 .slideShow {
   padding: 2rem;
   font-size: 1.6rem;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
-}
-
-.slideShow__container {
-  height: auto;
 }
 
 .slideShow__innerContainer {
@@ -741,10 +757,42 @@ $breakpoints
   position: relative;
 }
 
+@media (max-width: 25em) {
+  .slideShow__innerContainer {
+    height: 40rem;
+    width: 40rem;
+    position: relative;
+  }
+}
+
+@media (min-width: 25.0625em) and (max-width: 37.5em) {
+  .slideShow__innerContainer {
+    height: 40rem;
+    width: 40rem;
+    position: relative;
+  }
+}
+
 .slideShow__slides {
   height: 50rem;
   width: 50rem;
   display: none;
+}
+
+@media (max-width: 25em) {
+  .slideShow__slides {
+    height: 40rem;
+    width: 40rem;
+    display: none;
+  }
+}
+
+@media (min-width: 25.0625em) and (max-width: 37.5em) {
+  .slideShow__slides {
+    height: 40rem;
+    width: 40rem;
+    display: none;
+  }
 }
 
 .slideShow__slides img {
@@ -752,6 +800,24 @@ $breakpoints
   width: 50rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 25em) {
+  .slideShow__slides img {
+    height: 40rem;
+    width: 40rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (min-width: 25.0625em) and (max-width: 37.5em) {
+  .slideShow__slides img {
+    height: 40rem;
+    width: 40rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .slideShow__indicators {

@@ -17,7 +17,6 @@ class TodoApp extends React.Component {
     }
 
 
-
     handleChange = (e) => {
         // Input values
         const { name, value } = e.target

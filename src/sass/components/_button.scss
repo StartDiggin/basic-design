@@ -1,9 +1,11 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 // buttons
 .submitBtn {
   width: 8rem;
   height: 2rem;
+  font-size: 1.6rem;
   border-radius: 5rem;
   margin: 2rem 0;
   border: 0;
@@ -21,6 +23,7 @@
 .btn {
   width: 7rem;
   height: 2rem;
+  font-size: 1.6rem;
   border-radius: 5rem;
   margin: 1rem 1rem;
   border: 0;
@@ -36,12 +39,10 @@
 
   &--md {
     width: 9rem;
-    font-size: 1.6rem;
   }
 
   &--lg {
-    width: 12rem;
-    font-size: 1.6rem;
+    width: 11rem;
   }
 }
 

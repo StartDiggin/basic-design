@@ -6,7 +6,7 @@ function updateForm(props){
             <form className="todo__form--update" onSubmit={props.onSubmit}>
                 <label className="todo__label">Enter Todo:</label>
                 <input className="todo__input" type="text" name = "todo" value = {props.todo} placeholder = "Todo" onChange = {props.onChange}/>
-                <button className="btn">Update</button>
+                <button className="btn btn--md">Update</button>
             </form>
         </div>
     )
