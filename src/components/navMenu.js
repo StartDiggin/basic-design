@@ -23,7 +23,6 @@ onClick = () => {
               </label>
 
               <div className="nav__background">&nbsp;</div>
-        
                 <nav className="nav__nav" >
                   <ul className="nav__list" onClick={this.onClick}>
                     <li className="nav__item"><NavLink to="/" className="nav__links">Home</NavLink></li>

@@ -7,8 +7,6 @@ import clap from './sounds/clap.wav'
 
 
 
-
-
 const TimerApp = () => {
     // main timer variables 
     const [counter, setCounter] = useState(0)
